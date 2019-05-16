@@ -14,14 +14,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01B7E6E4228CC389001C08EC /* SimpleStreamPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleStreamPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B7E6E4228CC389001C08EC /* MicroStreamPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroStreamPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7E6E7228CC389001C08EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01B7E6E8228CC389001C08EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01B7E6EA228CC389001C08EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01B7E6ED228CC389001C08EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		01B7E6EF228CC389001C08EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B7E6F0228CC38A001C08EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		01B7E6F2228CC38A001C08EC /* SimpleStreamPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleStreamPlayer.entitlements; sourceTree = "<group>"; };
+		01B7E6F2228CC38A001C08EC /* MicroStreamPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MicroStreamPlayer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,7 @@
 		01B7E6DB228CC389001C08EC = {
 			isa = PBXGroup;
 			children = (
-				01B7E6E6228CC389001C08EC /* SimpleStreamPlayer */,
+				01B7E6E6228CC389001C08EC /* MicroStreamPlayer */,
 				01B7E6E5228CC389001C08EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +46,12 @@
 		01B7E6E5228CC389001C08EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01B7E6E4228CC389001C08EC /* SimpleStreamPlayer.app */,
+				01B7E6E4228CC389001C08EC /* MicroStreamPlayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		01B7E6E6228CC389001C08EC /* SimpleStreamPlayer */ = {
+		01B7E6E6228CC389001C08EC /* MicroStreamPlayer */ = {
 			isa = PBXGroup;
 			children = (
 				01B7E6E7228CC389001C08EC /* AppDelegate.h */,
@@ -60,17 +60,17 @@
 				01B7E6EC228CC389001C08EC /* MainMenu.xib */,
 				01B7E6EF228CC389001C08EC /* Info.plist */,
 				01B7E6F0228CC38A001C08EC /* main.m */,
-				01B7E6F2228CC38A001C08EC /* SimpleStreamPlayer.entitlements */,
+				01B7E6F2228CC38A001C08EC /* MicroStreamPlayer.entitlements */,
 			);
-			path = SimpleStreamPlayer;
+			path = MicroStreamPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		01B7E6E3228CC389001C08EC /* SimpleStreamPlayer */ = {
+		01B7E6E3228CC389001C08EC /* MicroStreamPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01B7E6F5228CC38A001C08EC /* Build configuration list for PBXNativeTarget "SimpleStreamPlayer" */;
+			buildConfigurationList = 01B7E6F5228CC38A001C08EC /* Build configuration list for PBXNativeTarget "MicroStreamPlayer" */;
 			buildPhases = (
 				01B7E6E0228CC389001C08EC /* Sources */,
 				01B7E6E1228CC389001C08EC /* Frameworks */,
@@ -81,9 +81,9 @@
 			);
 			dependencies = (
 			);
-			name = SimpleStreamPlayer;
-			productName = SimpleStreamPlayer;
-			productReference = 01B7E6E4228CC389001C08EC /* SimpleStreamPlayer.app */;
+			name = MicroStreamPlayer;
+			productName = MicroStreamPlayer;
+			productReference = 01B7E6E4228CC389001C08EC /* MicroStreamPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 01B7E6DF228CC389001C08EC /* Build configuration list for PBXProject "SimpleStreamPlayer" */;
+			buildConfigurationList = 01B7E6DF228CC389001C08EC /* Build configuration list for PBXProject "MicroStreamPlayer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01B7E6E3228CC389001C08EC /* SimpleStreamPlayer */,
+				01B7E6E3228CC389001C08EC /* MicroStreamPlayer */,
 			);
 		};
 /* End PBXProject section */
@@ -295,15 +295,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SimpleStreamPlayer/SimpleStreamPlayer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MicroStreamPlayer/MicroStreamPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SimpleStreamPlayer/Info.plist;
+				INFOPLIST_FILE = MicroStreamPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.kolcha.SimpleStreamPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.kolcha.MicroStreamPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -312,15 +312,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SimpleStreamPlayer/SimpleStreamPlayer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MicroStreamPlayer/MicroStreamPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SimpleStreamPlayer/Info.plist;
+				INFOPLIST_FILE = MicroStreamPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.kolcha.SimpleStreamPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.kolcha.MicroStreamPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -328,7 +328,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01B7E6DF228CC389001C08EC /* Build configuration list for PBXProject "SimpleStreamPlayer" */ = {
+		01B7E6DF228CC389001C08EC /* Build configuration list for PBXProject "MicroStreamPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01B7E6F3228CC38A001C08EC /* Debug */,
@@ -337,7 +337,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01B7E6F5228CC38A001C08EC /* Build configuration list for PBXNativeTarget "SimpleStreamPlayer" */ = {
+		01B7E6F5228CC38A001C08EC /* Build configuration list for PBXNativeTarget "MicroStreamPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01B7E6F6228CC38A001C08EC /* Debug */,

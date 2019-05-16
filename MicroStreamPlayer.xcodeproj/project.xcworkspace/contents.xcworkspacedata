@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SimpleStreamPlayer.xcodeproj">
+      location = "self:MicroStreamPlayer.xcodeproj">
    </FileRef>
 </Workspace>
