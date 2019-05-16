@@ -81,8 +81,8 @@
 			);
 			dependencies = (
 			);
-			name = MicroStreamPlayer;
-			productName = MicroStreamPlayer;
+			name = "Micro Stream Player";
+			productName = "Micro Stream Player";
 			productReference = 01B7E6E4228CC389001C08EC /* MicroStreamPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
