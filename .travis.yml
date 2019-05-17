@@ -1,0 +1,19 @@
+language: objective-c
+
+os: osx
+
+script:
+  - xcodebuild build
+
+before_deploy:
+  - pushd build/Release > /dev/null
+  - zip -r "Micro Stream Player.zip" "Micro Stream Player.app"
+  - popd > /dev/null
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_OAUTH_TOKEN
+  file: "build/Release/Micro Stream Player.zip"
+  skip_cleanup: true
+  on:
+    tags: true
