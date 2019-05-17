@@ -1,6 +1,7 @@
 language: objective-c
 
 os: osx
+osx_image: xcode10.2
 
 script:
   - xcodebuild build
