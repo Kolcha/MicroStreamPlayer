@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01498F9C228EE49A003F4A25 /* AppIcon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 01498F9B228EE49A003F4A25 /* AppIcon.iconset */; };
 		01B7E6E9228CC389001C08EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B7E6E8228CC389001C08EC /* AppDelegate.m */; };
 		01B7E6EB228CC389001C08EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B7E6EA228CC389001C08EC /* Assets.xcassets */; };
 		01B7E6EE228CC389001C08EC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B7E6EC228CC389001C08EC /* MainMenu.xib */; };
@@ -14,7 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01B7E6E4228CC389001C08EC /* MicroStreamPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroStreamPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01498F9B228EE49A003F4A25 /* AppIcon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = AppIcon.iconset; sourceTree = "<group>"; };
+		01B7E6E4228CC389001C08EC /* Micro Stream Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Micro Stream Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7E6E7228CC389001C08EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01B7E6E8228CC389001C08EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01B7E6EA228CC389001C08EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		01B7E6E5228CC389001C08EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01B7E6E4228CC389001C08EC /* MicroStreamPlayer.app */,
+				01B7E6E4228CC389001C08EC /* Micro Stream Player.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +56,7 @@
 		01B7E6E6228CC389001C08EC /* MicroStreamPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				01498F9B228EE49A003F4A25 /* AppIcon.iconset */,
 				01B7E6E7228CC389001C08EC /* AppDelegate.h */,
 				01B7E6E8228CC389001C08EC /* AppDelegate.m */,
 				01B7E6EA228CC389001C08EC /* Assets.xcassets */,
@@ -68,9 +71,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		01B7E6E3228CC389001C08EC /* MicroStreamPlayer */ = {
+		01B7E6E3228CC389001C08EC /* Micro Stream Player */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01B7E6F5228CC38A001C08EC /* Build configuration list for PBXNativeTarget "MicroStreamPlayer" */;
+			buildConfigurationList = 01B7E6F5228CC38A001C08EC /* Build configuration list for PBXNativeTarget "Micro Stream Player" */;
 			buildPhases = (
 				01B7E6E0228CC389001C08EC /* Sources */,
 				01B7E6E1228CC389001C08EC /* Frameworks */,
@@ -83,7 +86,7 @@
 			);
 			name = "Micro Stream Player";
 			productName = "Micro Stream Player";
-			productReference = 01B7E6E4228CC389001C08EC /* MicroStreamPlayer.app */;
+			productReference = 01B7E6E4228CC389001C08EC /* Micro Stream Player.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -118,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01B7E6E3228CC389001C08EC /* MicroStreamPlayer */,
+				01B7E6E3228CC389001C08EC /* Micro Stream Player */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +133,7 @@
 			files = (
 				01B7E6EB228CC389001C08EC /* Assets.xcassets in Resources */,
 				01B7E6EE228CC389001C08EC /* MainMenu.xib in Resources */,
+				01498F9C228EE49A003F4A25 /* AppIcon.iconset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +298,6 @@
 		01B7E6F6228CC38A001C08EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MicroStreamPlayer/MicroStreamPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -311,7 +314,6 @@
 		01B7E6F7228CC38A001C08EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MicroStreamPlayer/MicroStreamPlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -337,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01B7E6F5228CC38A001C08EC /* Build configuration list for PBXNativeTarget "MicroStreamPlayer" */ = {
+		01B7E6F5228CC38A001C08EC /* Build configuration list for PBXNativeTarget "Micro Stream Player" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01B7E6F6228CC38A001C08EC /* Debug */,
