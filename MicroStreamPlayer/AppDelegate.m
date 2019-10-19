@@ -20,6 +20,8 @@
 NSString * const kLastURL = @"last_url";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+
     _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     _statusItem.button.image = [NSImage imageNamed:@"StatusBarButtonImage"];
 
@@ -29,6 +31,7 @@ NSString * const kLastURL = @"last_url";
     _statusItem.menu = menu;
 
     _player = [AVPlayer playerWithPlayerItem:nil];
+    [_player addObserver:self forKeyPath:@"status" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial) context:nil];
     [self startPlayer:[[NSUserDefaults standardUserDefaults] URLForKey:kLastURL]];
 }
 
@@ -36,6 +39,7 @@ NSString * const kLastURL = @"last_url";
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     [_player pause];
     [_player replaceCurrentItemWithPlayerItem:nil];
+    [_player removeObserver:self forKeyPath:@"status"];
 }
 
 
@@ -51,6 +55,10 @@ NSString * const kLastURL = @"last_url";
 
 -(void)startPlayer:(nullable NSURL *)url {
     [_player pause];
+
+    if (_player.currentItem)
+        [_player.currentItem removeObserver:self forKeyPath:@"status"];
+
     if (url) {
         [_player replaceCurrentItemWithPlayerItem:[AVPlayerItem playerItemWithURL:url]];
         [_player setVolume:0.75];
@@ -58,6 +66,39 @@ NSString * const kLastURL = @"last_url";
     } else {
         [_player replaceCurrentItemWithPlayerItem:nil];
     }
+
+    if (_player.currentItem)
+        [_player.currentItem addObserver:self forKeyPath:@"status" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial) context:nil];
+}
+
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey, id> *)change context:(void *)context {
+    if (object != _player && object != _player.currentItem) {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+        return;
+    }
+
+    if ([keyPath isEqualToString:@"status"]) {
+        NSError* error;
+
+        if (object == _player && _player.status == AVPlayerStatusFailed)
+            error = _player.error;
+        if (object == _player.currentItem && _player.currentItem.status == AVPlayerItemStatusFailed)
+            error = _player.currentItem.error;
+
+        if (error) {
+            NSUserNotification *notification = [[NSUserNotification alloc] init];
+            notification.title = @"Error";
+            notification.informativeText = error.localizedDescription;
+            [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+            [self startPlayer:[[NSUserDefaults standardUserDefaults] URLForKey:kLastURL]];
+        }
+    }
+}
+
+
+- (BOOL)userNotificationCenter:(NSUserNotificationCenter *)center shouldPresentNotification:(NSUserNotification *)notification {
+    return YES;
 }
 
 
