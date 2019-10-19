@@ -10,14 +10,13 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
-
 @property (nonatomic, readonly) NSStatusItem *statusItem;
 @property (nonatomic, readonly) AVPlayer *player;
 @end
 
 @implementation AppDelegate
 
-NSString * const kLastURL = @"last_url";
+NSString *const kLastURL = @"last_url";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
@@ -43,7 +42,7 @@ NSString * const kLastURL = @"last_url";
 }
 
 
--(void)openNewUrl {
+- (void)openNewUrl {
     NSString *strurl = [AppDelegate getString:@"Stream URL to play:" :@""];
     if ([strurl length] != 0) {
         NSURL *url = [NSURL URLWithString:strurl];
@@ -53,7 +52,7 @@ NSString * const kLastURL = @"last_url";
 }
 
 
--(void)startPlayer:(nullable NSURL *)url {
+- (void)startPlayer:(nullable NSURL *)url {
     [_player pause];
 
     if (_player.currentItem)
@@ -79,7 +78,7 @@ NSString * const kLastURL = @"last_url";
     }
 
     if ([keyPath isEqualToString:@"status"]) {
-        NSError* error;
+        NSError *error;
 
         if (object == _player && _player.status == AVPlayerStatusFailed)
             error = _player.error;
@@ -102,7 +101,7 @@ NSString * const kLastURL = @"last_url";
 }
 
 
-+(NSString*)getString:(nonnull NSString *)message :(nonnull NSString *)defaultString {
++ (NSString *)getString:(nonnull NSString *)message :(nonnull NSString *)defaultString {
     NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 400, 22)];
     [input setStringValue:defaultString];
     [input setMaximumNumberOfLines:1];
