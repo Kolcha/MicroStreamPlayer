@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 
 @end
