@@ -14,7 +14,9 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $GITHUB_OAUTH_TOKEN
+  target_commitish: master
   file: "build/Release/Micro Stream Player.zip"
   skip_cleanup: true
+  overwrite: true
   on:
     tags: true
