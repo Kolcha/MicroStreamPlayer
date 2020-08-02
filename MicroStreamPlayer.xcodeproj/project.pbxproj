@@ -75,7 +75,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01B7E6F5228CC38A001C08EC /* Build configuration list for PBXNativeTarget "Micro Stream Player" */;
 			buildPhases = (
-				01E17A72228F10BC000AC8E2 /* Assign Build Number */,
 				01B7E6E0228CC389001C08EC /* Sources */,
 				01B7E6E1228CC389001C08EC /* Frameworks */,
 				01B7E6E2228CC389001C08EC /* Resources */,
@@ -138,27 +137,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		01E17A72228F10BC000AC8E2 /* Assign Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Assign Build Number";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + $TRAVIS_BUILD_NUMBER))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01B7E6E0228CC389001C08EC /* Sources */ = {
