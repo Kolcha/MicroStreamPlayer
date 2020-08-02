@@ -302,11 +302,13 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 75;
 				INFOPLIST_FILE = MicroStreamPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.kolcha.MicroStreamPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -319,11 +321,13 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 75;
 				INFOPLIST_FILE = MicroStreamPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.kolcha.MicroStreamPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
