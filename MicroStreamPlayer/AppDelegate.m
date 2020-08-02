@@ -38,6 +38,27 @@ NSString *const kLastURL = @"last_url";
 }
 
 
+- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename {
+    NSString *content = [NSString stringWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:nil];
+    if (!content)
+        return NO;
+
+    NSCharacterSet *separator = [NSCharacterSet newlineCharacterSet];
+    for (NSString *line in [content componentsSeparatedByCharactersInSet:separator]) {
+        if ([line hasPrefix:@"http"]) {
+            NSURL *url = [NSURL URLWithString:line];
+            if (url) {
+                [[NSUserDefaults standardUserDefaults] setURL:url forKey:kLastURL];
+                [self startPlayer:url];
+                return YES;
+            }
+        }
+    }
+
+    return NO;
+}
+
+
 - (void)openNewUrl {
     NSString *strurl = [AppDelegate getString:@"Stream URL to play:" :@""];
     if ([strurl length] != 0) {
