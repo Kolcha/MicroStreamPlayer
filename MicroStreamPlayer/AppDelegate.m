@@ -78,6 +78,7 @@ NSString *const kLastURL = @"last_url";
     } else {
         [_player replaceCurrentItemWithPlayerItem:nil];
     }
+    [_statusItem.button setToolTip:url ? url.absoluteString : nil];
 }
 
 
