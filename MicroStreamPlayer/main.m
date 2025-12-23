@@ -33,7 +33,9 @@ static void *PlayerItemStatusContext = &PlayerItemStatusContext;
     self.statusItem.menu = menu;
 
     self.player = [AVPlayer playerWithPlayerItem:nil];
-    [self startPlayer:[[NSUserDefaults standardUserDefaults] URLForKey:kLastURL]];
+    NSString *lastURLString = [[NSUserDefaults standardUserDefaults] stringForKey:kLastURL];
+    NSURL *lastURL = lastURLString ? [NSURL URLWithString:lastURLString] : [[NSUserDefaults standardUserDefaults] URLForKey:kLastURL];
+    [self startPlayer:lastURL];
 }
 
 
@@ -48,7 +50,7 @@ static void *PlayerItemStatusContext = &PlayerItemStatusContext;
 
 
 - (void)openNewUrl {
-    NSString *lastURLString = [[NSUserDefaults standardUserDefaults] URLForKey:kLastURL].absoluteString ?: @"";
+    NSString *lastURLString = [[NSUserDefaults standardUserDefaults] stringForKey:kLastURL] ?: @"";
     NSString *strurl = [AppDelegate getString:@"Stream URL to play:" :lastURLString];
 
     if ([strurl length] == 0) {
@@ -70,7 +72,7 @@ static void *PlayerItemStatusContext = &PlayerItemStatusContext;
         return;
     }
 
-    [[NSUserDefaults standardUserDefaults] setURL:url forKey:kLastURL];
+    [[NSUserDefaults standardUserDefaults] setObject:strurl forKey:kLastURL];
     [self startPlayer:url];
 }
 
